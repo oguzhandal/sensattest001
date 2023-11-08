@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sensat Test" thread-count="5"
+	parallel="tests" verbose="4">
+
+<listeners>
+	<listener class-name="qmframework.listeners.ExtentReportListener"></listener>
+</listeners>
+
+	<test name="Sensat Home Page">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.HomePageTests" />
+		</classes>
+	</test>
+	<test name="Sensat Register Page">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.RegisterPageTests" />
+		</classes>
+	</test>
+	<test name="Sensat Login Page">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.LoginPageTests" />
+		</classes>
+	</test>
+	<test name="Sensat CreasteAdvertKurumsal Page">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.CreateAdvertKurumsalTests" />
+		</classes>
+	</test>
+	<test name="Sensat User Panel">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.UserPanelTest" />
+		</classes>
+	</test>
+</suite>

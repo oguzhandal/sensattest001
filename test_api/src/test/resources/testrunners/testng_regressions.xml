@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SenSat Test Api Smoke" thread-count="4" parallel="tests" verbose="2">
+
+    <listeners>
+        <listener class-name="org.sensat.ExtentReportListener"/>
+    </listeners>
+
+    <test name="Sensat Test Api Smoke BackOffice ">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.tests.Backoffice"/>
+        </classes>
+    </test>
+
+    <test name="Sensat Test Api Smoke Advertisement ">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.tests.AdvertisementTest"/>
+        </classes>
+    </test>
+
+    <test name="Sensat Test Api Smoke Search ">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.tests.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Sensat Test Api Smoke Notification">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.tests.NotificationTest"/>
+        </classes>
+    </test>
+
+    <test name="Sensat Test Api Smoke User">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.tests.UserTest"/>
+        </classes>
+    </test>
+
+</suite>

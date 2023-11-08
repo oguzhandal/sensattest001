@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sensat Preprod Api Smoke" thread-count="4" verbose="2">
+
+    <listeners>
+        <listener class-name="org.sensat.ExtentReportListener"/>
+    </listeners>
+
+    <test name="Sensat Preprod Api Smoke" parallel="none">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.sensat.test.search.SearchTest"/>
+            <class name="org.sensat.test.backoffice.BackofficeUserTest"/>
+            <class name="org.sensat.test.user.IndividualUserTest"/>
+            <class name="org.sensat.test.user.CorporateUserTest"/>
+            <class name="org.sensat.test.advertisement.AdvertisementTest"/>
+            <class name="org.sensat.test.notification.NotificationTest"/>
+        </classes>
+    </test>
+
+
+</suite>

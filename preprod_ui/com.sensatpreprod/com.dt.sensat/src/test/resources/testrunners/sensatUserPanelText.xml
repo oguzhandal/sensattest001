@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Sensat User Panel Test" thread-count="5"
+	parallel="tests" verbose="4">
+
+<listeners>
+	<listener class-name="qmframework.listeners.ExtentReportListener"></listener>
+</listeners>
+	<test name="Sensat User Panel">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sensat.tests.test.UserPanelTest" />
+		</classes>
+	</test>
+</suite>
